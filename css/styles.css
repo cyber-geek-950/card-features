@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -74,8 +74,8 @@ header p {
 
 .card img {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .flex-pair {
@@ -106,5 +106,36 @@ header p {
 footer {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    min-width: 340px;
+  }
+
+  .cards {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header{
+    padding: 0.5rem;
+  }
+
+  .title_one {
+    padding-top: 1rem;
+  }
+
+  .title_one,
+  .title_two {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-weight: 300;
+    font-size: 1rem;
+  }
 }
